@@ -1,0 +1,8 @@
+{
+  "name": "fetch_smg",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "download-file": "^0.1.5",
+    "req-fast": "^0.2.14"
+  }
+}
