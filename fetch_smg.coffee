@@ -9,6 +9,7 @@ SMG_SEASONS = {}
 SMG_SEASONS_KEY = []
 
 current_season = 0
+num = 0
 output = "output"
 
 
@@ -92,7 +93,10 @@ download_images = (images = [], season, next) ->
 				fetch_seasons season, next
 			else
 				current_season += 1
-				SMG_SEASONS_KEY[current_season] and fetch_seasons SMG_SEASONS_KEY[current_season]
+				if SMG_SEASONS_KEY[current_season]
+					fetch_seasons SMG_SEASONS_KEY[current_season]
+				else
+					console.log "---download #{num} images---"
 
 			return no
 
@@ -115,6 +119,7 @@ download_images = (images = [], season, next) ->
 					color = "green"
 
 				console.log image_url[color]
+				num++
 
 				down index + 1
 
