@@ -92,7 +92,7 @@ download_images = (images = [], season, next) ->
 				fetch_seasons season, next
 			else
 				current_season += 1
-				SMG_SEASONS[current_season] and fetch_seasons SMG_SEASONS[current_season]
+				SMG_SEASONS_KEY[current_season] and fetch_seasons SMG_SEASONS_KEY[current_season]
 
 			return no
 
